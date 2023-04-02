@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(25, 200, 25);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tube {
+   position: absolute;
+   bottom: 0;
+   width: 60px;
+   animation: tube-animation 2s infinite linear;
+}
+
+@keyframes tube-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.mario {
+  position: absolute;
+  height: 102px;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 560ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+     bottom: 0;
+    }
+    40% {
+    bottom: 24%;
+    }
+    50% {
+    bottom: 24%;
+    }
+    60% {
+    bottom: 24%;
+    }
+    100% {
+    bottom: 0;
+    }
+}
+
+.cloud {
+  position: absolute;
+  width: 1000px;
+  animation: cloud-animation 17s infinite linear;
+}
+
+@keyframes cloud-animation {
+  from {
+    right: -1050px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+/*lembrar de corrijir bug da nuvem se movendo na tela de morte*/
